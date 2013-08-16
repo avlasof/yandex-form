@@ -138,4 +138,13 @@ $(window).ready(function() {
 		});
 		return false;
 	});
+
+	$('.form-submit input[type=reset]').click(function(){
+		$('.status-bar__link').removeClass('status-bar__link_state_done');
+		$('.qa-list__item').removeClass('qa-list__item_state_done');
+		$('.form-submit__message').text('').removeClass('success error');
+		if (localStorage) {
+			localStorage.clear();
+		}
+	});
 });
