@@ -116,4 +116,26 @@ $(window).ready(function() {
 			}
 		});
 	}
+
+	var form = $('.form') 
+	form.submit(function(){
+		$.ajax({
+			type: form.attr('method'),
+			url: form.attr('action'),
+			data: form.serialize(),
+			success: function (data) {
+				if (localStorage) {
+					localStorage.clear();
+				}
+				$('.form-submit__message')
+					.text('Форма отправлена')
+					.addClass('success')
+					.removeClass('error');
+			},
+			error: function() {
+				$('.form-submit__message').text('Произошла ошибка, попробуйте еще раз').addClass('error');
+			}
+		});
+		return false;
+	});
 });
