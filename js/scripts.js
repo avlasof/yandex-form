@@ -46,4 +46,27 @@ $(window).ready(function() {
 			}
 		}
 	});
+
+	$('.answer__checkbox').click(function(){			
+		var id = $(this).parents('.qa-list__item').attr('id').slice(3) - 1;
+			that = items[id];
+			checked = $('.answer__checkbox').is(':checked');
+			currentSection = $('#' + that.id + '');
+
+		if (checked) {
+			that.checked = true;
+			currentSection.addClass('qa-list__item_state_done');
+			that.item.addClass('status-bar__link_state_done')
+				.removeClass('status-bar__link_state_undone');
+		} else {
+			if (!(that.state)) {
+				that.checked = false;
+				currentSection.removeClass('qa-list__item_state_done');
+				that.item.removeClass('status-bar__link_state_done')
+					.addClass('status-bar__link_state_undone');
+			} else {
+				that.checked = false;
+			}
+		}
+	});
 });
