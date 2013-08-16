@@ -3,10 +3,10 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Arial;
-	font-size: 100%;
-	line-height: 120%;
 	min-width: 960px;
+	font-size: 100%;
+	font-family: Arial;
+	line-height: 120%;
 }
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
@@ -17,164 +17,164 @@ input[type="checkbox"], input[type="radio"] {
 /* Navbar
 ---------------------------------------- */
 .navbar {
-	width: 100%;
 	position: fixed;
-	background: #fff;
-	-webkit-backface-visibility: hidden;
-	overflow: hidden;
 	z-index: 50;
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
 	box-shadow: 0 1px 5px 0px rgba(0,0,0, .3);
+	-webkit-backface-visibility: hidden;
 }
 .navbar__inner {
-	width: 960px;
 	margin: 0 auto;
-	text-align: center;
+	width: 960px;
 	height: 50px;
+	text-align: center;
 }
 
 /* Logo
 ---------------------------------------- */
 .logo {
-	margin: 11px 10px 0 10px;
-	font-size: 28px;
-	line-height: 1;
 	position: absolute;
 	top: 0;
 	left: 0;
+	margin: 11px 10px 0 10px;
 	font-weight: normal;
+	font-size: 28px;
+	line-height: 1;
 }
 
 /* Status-bar
 ---------------------------------------- */
-.status-bar {
-	margin: 0;
-	text-align: left;
-	padding: 0;
+.status-bar {@start-color: #00b7ea; @end-color: #009ec3);
 	display: inline-block;
-	#gradient > .horizontal(@start-color: #00b7ea; @end-color: #009ec3);
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	#gradient > .horizontal(
 }
 .status-bar__item {
+	position: relative;
 	float: left;
 	overflow: hidden;
 	width: 50px;
-	position: relative;
 }
 .status-bar__link {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin: 5px;
+	padding: 10px 0;
+	width: 40px;
+	height: 20px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 20px #fff;
+	color: #fff !important;
 	text-align: center;
 	text-decoration: none;
-	font-family: Arial;
-	width: 40px;
-	margin: 5px;
-	height: 20px;
-	padding: 10px 0;
 	font-size: 20px;
+	font-family: Arial;
 	line-height: 20px;
-	color: #fff !important;
-	float: left;
-	box-shadow: 0 0 0 20px #fff;
-	display: inline-block;
-	border-radius: 50%;
-	position: relative;
 }
 .status-bar__link_state_done:before {
 	position: absolute;
 	top: -5px;
 	left: -5px;
-	font-size: 14px;
-	font-family: Arial;
 	z-index: 5;
 	padding: 15px 5px 5px 5px;
 	width: 100%;
 	height: 100%;
 	background: rgba(88, 219, 67, 0.9);
 	content: "готово";
+	font-size: 14px;
+	font-family: Arial;
 }
 .status-bar__link_state_undone:before {
 	position: absolute;
-	visibility: hidden;
 	top: -5px;
 	left: -5px;
-	font-size: 14px;
-	font-family: Arial;
 	z-index: 5;
+	visibility: hidden;
 	padding: 15px 5px 5px 5px;
 	width: 100%;
 	height: 100%;
 	background: rgba(88, 219, 67, 0.9);
 	content: "готово";
+	font-size: 14px;
+	font-family: Arial;
 }
 .status-bar__link_state_storage:before {
 	position: absolute;
 	top: -5px;
 	left: -5px;
-	font-size: 14px;
-	font-family: Arial;
 	z-index: 5;
 	padding: 15px 5px 5px 5px;
 	width: 100%;
 	height: 100%;
 	background: rgba(88, 219, 67, 0.9);
 	content: "готово";
+	font-size: 14px;
+	font-family: Arial;
 }
 
 /* Page
 ---------------------------------------- */
 .page {
-	padding-top: 50px;
-	box-shadow: 0 -1px 5px 3px rgba(0,0,0, .3);
-	overflow: hidden;
-	margin-bottom: 50px;
 	position: relative;
 	z-index: 10;
+	overflow: hidden;
+	margin-bottom: 50px;
+	padding-top: 50px;
 	background: #fff;
+	box-shadow: 0 -1px 5px 3px rgba(0,0,0, .3);
 }
 .page__inner {
-	width: 760px;
-	margin: 0 auto;
 	position: relative;
+	margin: 0 auto;
 	padding-top: 50px;
+	width: 760px;
 }
 
 /* Status-line
 ---------------------------------------- */
-.status-line {
+.status-line {@start-color: #00b7ea; @end-color: #009ec3);
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 10px;
 	height: 100%;
 	
-	#gradient > .vertical(@start-color: #00b7ea; @end-color: #009ec3);
+	#gradient > .vertical(
 }
 
 /* QA-item
 ---------------------------------------- */
 .qa-item {
-	font-size: 80%;
-	cursor: pointer;
-	padding: 5px 5px 5px 20px;
-	text-transform: uppercase;
+	.backface-visibility(hidden);
+	.transition(all 0.3s);
 	position: fixed;
 	top: 100px;
 	left: -10px;
 	z-index: 100;
+	overflow: hidden;
+	padding: 5px 5px 5px 20px;
 	background: #009ec3;
 	color: #fff;
-	overflow: hidden;
-	.backface-visibility(hidden);
-	.transition(all 0.3s);
+	text-transform: uppercase;
+	font-size: 80%;
+	cursor: pointer;
 
 	&:hover  {
-		background: #00b7ea;
-		.translate(-5px; 0);
+		.translate(-5px;
+		background: #00b7ea; 0);
 	}
 }
 
 /* Form
 ---------------------------------------- */
 .form__title {
-	font-size: 20px;
 	font-weight: bold;
+	font-size: 20px;
 }
 
 /* Qa-list
@@ -182,14 +182,14 @@ input[type="checkbox"], input[type="radio"] {
 .qa-list {
 }
 .qa-list__item {
-	padding: 20px 0 20px 0;
-	border-left: 10px solid transparent;
 	position: relative;
+	padding: 20px 0 20px 0;
 	padding-left: 20px;
+	border-left: 10px solid transparent;
 }
 .qa-list__item_state_current {
 	border-left: 10px solid #F09740;
-	background: rgba(240, 151, 64, 0.1)
+	background: rgba(240, 151, 64, 0.1);
 }
 .qa-list__item_state_done {
 	border-left: 10px solid #58DB43 !important;
@@ -210,14 +210,14 @@ input[type="checkbox"], input[type="radio"] {
 }
 .qa-list__item_state_hide .question b:first-child p:first-child {
 	display: block !important;
-	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .qa-list__number {
 	display: inline-block;
-	vertical-align: top;
 	width: 120px;
+	vertical-align: top;
 	font-size: 14px;
 	line-height: 18px;
 }
@@ -226,8 +226,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 .qa-list__body {
 	display: inline-block;
-	vertical-align: top;
 	width: 570px;
+	vertical-align: top;
 }
 
 /* Question
@@ -274,38 +274,38 @@ input[type="checkbox"], input[type="radio"] {
 
 
 .form-submit input[type=submit] {
-	font-size: 100%;
-	padding: 6px 15px;
+	.border-radius(3px);
+	.transition(background-color 0.2s linear);
 	margin-right: 20px;
-	vertical-align: middle;
+	padding: 6px 15px;
 	border: 1px solid #00b7ea;
 	background-color: #009ec3;
 	color:#fff;
+	vertical-align: middle;
 	text-transform:uppercase;
+	font-size: 100%;
 	cursor:pointer;
-	.border-radius(3px);
-	.transition(background-color 0.2s linear);
 	
 	&:hover {
 		background-color:#00b7ea;
 	}
 	&:active {
-		background-color:#00b7ea;
 		.box-shadow(inset 0 1px 5px 0px rgba(0, 0, 0, 0.3));
+		background-color:#00b7ea;
 	}
 }
 .form-submit input[type=reset] {
-	font-size: 60%;
+	.border-radius(2px);
 	margin-right: 20px;
-	vertical-align: middle;
 	padding:5px 15px;
 	border: 1px solid #c60f20;
 	background-color: #e4162a;
-	opacity: .6;
 	color:#fff;
+	vertical-align: middle;
 	text-transform:uppercase;
+	font-size: 60%;
+	opacity: .6;
 	cursor:pointer;
-	.border-radius(2px);
 	
 	&:hover {
 		opacity: .8;
@@ -326,14 +326,14 @@ input[type="checkbox"], input[type="radio"] {
 	margin-bottom: 10px;
 }
 .answer__textarea {
-	max-width: 100%;
-	min-width: 100%;
-	font-size: 80%;
-	width: 100%;
-	padding: 5px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	padding: 5px;
+	min-width: 100%;
+	max-width: 100%;
+	width: 100%;
+	font-size: 80%;
 }
 
 
@@ -342,15 +342,15 @@ input[type="checkbox"], input[type="radio"] {
 .footer {
 	position: fixed;
 	bottom: 0;
-	background: #f5f5f5;
-	width: 100%;
 	padding-top: 15px;
-	height: 30px;
 	min-width: 960px;
+	width: 100%;
+	height: 30px;
+	background: #f5f5f5;
 }
 .footer__inner {
-	width: 740px;
 	margin: 0 auto;
+	width: 740px;
 }
 
 
@@ -386,18 +386,18 @@ input[type="checkbox"], input[type="radio"] {
 	animation: getUnDone 500ms;
 }
 @-webkit-keyframes getUnDone {
-	from { -webkit-transform: translateY(0); visibility: visible; }
+	from { visibility: visible; -webkit-transform: translateY(0); }
 	to   { -webkit-transform: translateY(80px);}
 }
 @-moz-keyframes getUnDone {
-	from { -moz-transform: translateY(0); visibility: visible; }
+	from { visibility: visible; -moz-transform: translateY(0); }
 	to   { -moz-transform: translateY(80px); }
 }
 @-o-keyframes getUnDone {
-	from { -o-transform: translateY(0); visibility: visible; }
+	from { visibility: visible; -o-transform: translateY(0); }
 	to   { -o-transform: translateY(80px); }
 }
 @keyframes getUnDone {
-	from { transform: translateY(0); visibility: visible; }
+	from { visibility: visible; transform: translateY(0); }
 	to   { transform: translateY(80px); }
 }
