@@ -16,4 +16,34 @@ $(window).ready(function() {
 			$(currentId + ' .answer__textarea').focus();
 		});
 	});
+
+	$('.answer__textarea').focusin(function(){
+		var id = $(this).parents('.qa-list__item').attr('id').slice(3) - 1,
+			currentSection = $(this).parents('.qa-list__item');
+		currentSection.addClass('qa-list__item_state_current');
+	});
+
+	$('.answer__textarea').focusout(function(){
+		var id = $(this).parents('.qa-list__item').attr('id').slice(3) - 1,
+			that = items[id],
+			currentSection = $('#' + that.id + ''),
+			stateText = $(this).val();
+		currentSection.removeClass('qa-list__item_state_current');
+		
+		if (!(that.checked)) {
+			if (stateText) {
+				that.state = true;
+				currentSection.addClass('qa-list__item_state_done');
+				that.item.addClass('status-bar__link_state_done')
+					.removeClass('status-bar__link_state_undone');
+			} else {
+				if (that.state) {
+					that.state = false;
+					currentSection.removeClass('qa-list__item_state_done');
+					that.item.removeClass('status-bar__link_state_done')
+						.addClass('status-bar__link_state_undone');
+				}
+			}
+		}
+	});
 });
