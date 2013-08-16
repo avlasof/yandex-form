@@ -69,4 +69,15 @@ $(window).ready(function() {
 			}
 		}
 	});
+
+	$('.qa-item-hide').click(function(){
+		$('.qa-list__item').toggleClass('qa-list__item_state_hide');
+		if ($(this).hasClass('qa-item-show')) {
+			$(this).removeClass('qa-item-show');
+			$(this).text('Свернуть');
+		} else {
+			$(this).addClass('qa-item-show');
+			$(this).text('Развернуть');
+		}
+	});
 });
